@@ -1,3 +1,23 @@
+:root{
+	--huvud: blue;
+}
 .header-txt{
-	
+	color: var(--huvud);
+	font-size: 60px;
+}
+.tjej-logga{
+	max-height: 86px;
+	color: var(--huvud);
+}
+.header{
+	margin: auto;
+}
+.navi{
+	float: left;
+}
+.leftlogo{
+	float:left;
+}
+.logga{
+	max-height: 100px;
 }
