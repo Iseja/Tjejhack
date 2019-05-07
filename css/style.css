@@ -1,16 +1,21 @@
+/*ff1616*/
 :root{
-	--huvud: blue;
+	--huvud: 255, 22, 22;
 }
 .header-txt{
-	color: var(--huvud);
-	font-size: 60px;
+	color: rgba(var(--huvud));
+	font-size: 50px;
+	margin-left: 8px;
 }
 .tjej-logga{
-	max-height: 86px;
+	max-width: 50px;
 	color: var(--huvud);
 }
 .header{
 	margin: auto;
+}
+.navbar-nav{
+	margin-top:9px;
 }
 .navi{
 	float: left;
@@ -19,5 +24,18 @@
 	float:left;
 }
 .logga{
-	max-height: 100px;
+	max-width: 57px;
+	margin-left: 11px;
+}
+.titel{
+	float:left;
+}
+.btn-light{
+	background-color: rgba(var(--huvud), 0.9);
+	color: white;
+}
+footer{
+	height: 50px;
+	text-align: center;
+	padding: 20px;
 }
