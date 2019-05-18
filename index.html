@@ -1,72 +1,214 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" >
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-    <title>Tjejhack</title>
+    <title>Space Quiz</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light box">
-  <div>
-  	<img class="tjej-logga" src="img/Resurs2ElectricBoogaloo.png">
-  </div>
-  <a class="navbar-brand" href="index.html"><h1 class="header-txt"> Tjejhack</h1></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <!--Klassen menytext är för att ändra texten och klassen nu lägger en underline på nuvarande-->
-        <a class="nav-link" href="index.html"><p class="menytext nu">Hem</p></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="inriktningar.html"><p class="menytext">Spel</p></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="besok.html"><p class="menytext">Uppgifter</p></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="kontakt.html"><p class="menytext">Om oss</p></a>
-      </li>
-      <li class="nav-item">
-      	<a class="nav-link" href="press.html"><p class="menytext">Press</p></a>
-      </li>
-      <li class="nav-item">
-      	<button class="btn btn-light">Ladda ner</button></a>
-      </li>
-    </ul>
-  </div>
-  <div>
-  	<img class="d-none d-lg-block logga" src="img/logga.jpg">
-  </div>
-</nav>
-  <div class="container">
-  		
-  	</div>
-<footer>
-  <p>© Isak Jonsson 2019</p>
-</footer>
+  <form id="form1">
+    <div class="container">
+      <div class="row" id="hit">
+        <div class="col-md-8 offset-md-2 start">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="text1">QUIZ</h1>
+                <div class="knapp1">
+              <button class="btn btn-primary knapp1" type="button" value="hide" id="knapp">Starta Quizet!</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Frågekonstruktionen-->
+       <div class="row" id="ruta">
+        <div class="col-md-8 offset-md-2 frageruta">
+          <div class="row">
+            <div class="fraganr" id="fraganr"></div>
+            <div class="col-md-12" id="ruta1">
+            <!--Frågan-->
+
+              <label class="fraga">Är jorden rund?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga1" value="a"> Ja
+                </div><div class="alternativ">
+                <input type="radio" name="fraga1" value="b"> Nej
+                </div><div class="alternativ">
+                <input type="radio" name="fraga1" value="c"> Är detta äns en fråga?
+                </div>
+               </div>   
+             </div>
 
 
 
 
+            <div class="col-md-12" id="ruta2">
+            <!--Frågan-->
+              <label class="fraga">Roterar jorden kring solen?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga2" value="a"> Ja
+                </div><div class="alternativ">
+                <input type="radio" name="fraga2" value="b"> Nej
+                </div><div class="alternativ">
+                <input type="radio" name="fraga2" value="c"> Kanske
+                </div>
+               </div>   
+             </div>
 
+            <div class="col-md-12" id="ruta3">
+            <!--Frågan-->
+              <label class="fraga">Kan man landa på solen?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga3" value="a"> Ja
+                </div><div class="alternativ">
+                <input type="radio" name="fraga3" value="b"> Nej
+                </div><div class="alternativ">
+                <input type="radio" name="fraga3" value="c"> Om det är natt
+                </div>
+               </div>   
+             </div>
 
+            <div class="col-md-12" id="ruta4">
+            <!--Frågan-->
+              <label class="fraga">Finns eller har det funnits aliens på jorden?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga4" value="a"> Förmodligen
+                </div><div class="alternativ">
+                <input type="radio" name="fraga4" value="b"> Förmodligen inte
+                </div><div class="alternativ">
+                <input type="radio" name="fraga4" value="c"> Såg det på TV
+                </div>
+               </div>   
+             </div>
 
-  </div>
+            <div class="col-md-12" id="ruta5">
+            <!--Frågan-->
+              <label class="fraga">Finns månen?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga5" value="a"> Ja
+                </div><div class="alternativ">
+                <input type="radio" name="fraga5" value="b"> Nej
+                </div><div class="alternativ">
+                <input type="radio" name="fraga5" value="c"> Det är ett hologram
+                </div>
+               </div>   
+             </div>
 
+            <div class="col-md-12" id="ruta6">
+            <!--Frågan-->
+              <label class="fraga">Kan grisar flyga?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga6" value="a"> Ja
+                </div><div class="alternativ">
+                <input type="radio" name="fraga6" value="b"> Nej
+                </div><div class="alternativ">
+                <input type="radio" name="fraga6" value="c"> Om de hade utvecklat vingar, så kanske
+                </div>
+               </div>   
+             </div>
+
+            <div class="col-md-12" id="ruta7">
+            <!--Frågan-->
+              <label class="fraga">NASA eller SpaceX?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga7" value="a"> NASA
+                </div><div class="alternativ">
+                <input type="radio" name="fraga7" value="b"> SpaceX
+                </div><div class="alternativ">
+                <input type="radio" name="fraga7" value="c"> Båda
+                </div>
+               </div>   
+             </div>
+
+            <div class="col-md-12" id="ruta8">
+            <!--Frågan-->
+              <label class="fraga">SSC står för?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga8" value="a"> Svenska Solida Containrar
+                </div><div class="alternativ">
+                <input type="radio" name="fraga8" value="b"> Svenska Rymdaktiebolaget
+                </div><div class="alternativ">
+                <input type="radio" name="fraga8" value="c"> Vad är SSC?
+                </div>
+               </div>   
+             </div>
+
+            <div class="col-md-12" id="ruta9">
+            <!--Frågan-->
+              <label class="fraga">Hur många 18-24 åringar i USA tror att jorden är rund?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga9" value="a"> 94%
+                </div><div class="alternativ">
+                <input type="radio" name="fraga9" value="b"> 43%
+                </div><div class="alternativ">
+                <input type="radio" name="fraga9" value="c"> 66%
+                </div>
+               </div>   
+             </div>
+
+            <div class="col-md-12" id="ruta10">
+            <!--Frågan-->
+              <label class="fraga">Var quizet roligt?</label><br>
+              <!--Svarsalternativen-->
+              <div class="alternativen">
+               <div class="alternativ">
+                <input type="radio" name="fraga10" value="a"> Ja
+                </div><div class="alternativ">
+                <input type="radio" name="fraga10" value="a"> Ja
+                </div><div class="alternativ">
+                <input type="radio" name="fraga10" value="a"> Ja
+                </div>
+               </div>   
+             </div>
+
+              <div class="knappar">
+             <button class="btn btn-primary knapp2" type="button" value="hide" id="knapp2">Förra frågan</button>
+             <button class="btn btn-primary knapp2" type="button" value="hide" id="knapp3">Nästa fråga</button>
+             <button class="btn btn-primary knapp2" type="button" value="hide" id="knapp4" onclick="ratta()">Rätta</button>             
+            </div> 
+          </div> 
+        </div>
+      </div>
+
+      <div id="resultat" class="row">
+       <div class="col-md-8 offset-md-2 resultat">
+       <h2 class="text1" id="rätt"> Rätt antal svar: </h2>
+       </div>
+
+       </div>
+       
+     </div>
+</form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script  src="js/jquery.js"></script>
+    <script  src="js/script.js"></script>
   </body>
 </html>
