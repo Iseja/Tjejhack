@@ -1,6 +1,5 @@
 //Gömmmer allting
 $(function(){
-	$('#ruta1').hide();
     $('#ruta2').hide();
 	$('#ruta3').hide();
 	$('#ruta4').hide();
@@ -15,29 +14,20 @@ $(function(){
 	$('#resultat').hide();
 })
 var i = 1;
-//Visar frågerutan
-$(function() {
-    $('#ruta').hide();
-    $('#knapp').on('click', function() {
-    	$('#hit').slideUp(500);
-        $('#ruta1, #ruta').slideDown(500);
-        document.getElementById("fraganr").innerHTML = i + "/10";
-    });
-});
 //Byter till nästa fråga, om i inte är mindre än 9 tar den bort nästa fråga knappen och ersätter den med rätta knappen istället.
 $(document).ready(function(){
 	$('#knapp3').on('click', function(){
-		if (i<9) {
+		if (i<4) {
 		$('#ruta' + i).slideUp(500);
 		i++;
 		$('#ruta' + i).slideDown(500);
-		document.getElementById("fraganr").innerHTML =  i + "/10";
+		document.getElementById("fraganr").innerHTML =  i + "/5";
 	}
 	else {
 		$('#ruta' + i).slideUp(500);
 		i++;
 		$('#ruta' + i).slideDown(500);
-		document.getElementById("fraganr").innerHTML =  i + "/10";
+		document.getElementById("fraganr").innerHTML =  i + "/5";
 		$('#knapp3').hide();
 		$('#knapp4').show();	
 	}
@@ -49,9 +39,9 @@ $(function() {
 		$('#ruta' + i).slideUp(500);
 		i--;
 		$('#ruta' + i).slideDown(500);
-		document.getElementById("fraganr").innerHTML =  i + "/10";
+		document.getElementById("fraganr").innerHTML =  i + "/5";
 //Om i är mindre än 10 försvinner rätta knappen
-		if (i<10) {
+		if (i<5) {
 			$('#knapp4').hide();
 			$('#knapp3').show();
 		};
@@ -74,14 +64,9 @@ function ratta(){
 		var fråga3 = $("input[name='fraga3']:checked").val();
 		var fråga4 = $("input[name='fraga4']:checked").val();
 		var fråga5 = $("input[name='fraga5']:checked").val();
-		var fråga6 = $("input[name='fraga6']:checked").val();
-		var fråga7 = $("input[name='fraga7']:checked").val();
-		var fråga8 = $("input[name='fraga8']:checked").val();
-		var fråga9 = $("input[name='fraga9']:checked").val();
-		var fråga10 = $("input[name='fraga10']:checked").val();
  		var rätt = 0;
 //sen rättar den. Här ändrar man bokstaven till antingen a, b eller c baserat på vilket som är rätt svar.
- 		if (fråga1 == 'a') {
+ 		if (fråga1 == 'b') {
  			rätt++;
  		};
  		if (fråga2 == 'a') {
@@ -90,27 +75,13 @@ function ratta(){
  		if (fråga3 == 'b') {
  			rätt++;
  		};
- 		if (fråga4 == 'b') {
+ 		if (fråga4 == 'a') {
  			rätt++;
  		};
- 		if (fråga5 == 'a') {
+ 		if (fråga5 == 'c') {
  			rätt++;
  		};
- 		if (fråga6 == 'b') {
- 			rätt++;
- 		};
- 		if (fråga7 == 'c') {
- 			rätt++;
- 		};
- 		if (fråga8 === 'b') {
- 			rätt++;
- 		};
- 		if (fråga9 == 'c') {
- 			rätt++;
- 		};
- 		if (fråga10 == 'a') {
- 			rätt++;
- 		};
+
 //sen byter den sida till sidan som visar antal rätt
  		$('#ruta').slideUp(500);
  		$('#resultat').slideDown(500);
@@ -118,7 +89,52 @@ function ratta(){
  		document.getElementById("rätt").innerHTML = 'Rätt antal svar: ' + rätt;
 	}
 
+$(document).ready(function() {
+		   	var stickyNavTop = $('.nav').offset().top;
+
+		   	var stickyNav = function(){
+			    var scrollTop = $(window).scrollTop(); 
+			         
+			    if (scrollTop > stickyNavTop) { 
+			        $('.nav').addClass('sticky');
+			    } else {
+			        $('.nav').removeClass('sticky'); 
+			    }
+			};
+
+			stickyNav();
+			$(window).scroll(function() {
+				stickyNav();
+			});
+		});
 
 
+// Set the date we're counting down to
+var countDownDate = new Date("May 27, 2019 20:30:00").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
 
