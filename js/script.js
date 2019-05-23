@@ -138,3 +138,9 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+var a = 'fredrik'
+var b = 'johansson'
+var c = 'ronneby'
+$(function(){
+	document.getElementById("email").innerHTML = 'Email: ' + a + '.' + b + '@' + c + '.se';
+})
