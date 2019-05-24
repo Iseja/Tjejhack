@@ -1,4 +1,5 @@
 //Gömmmer allting
+var i = 1;
 $(function(){
     $('#ruta2').hide();
 	$('#ruta3').hide();
@@ -12,8 +13,8 @@ $(function(){
 	$('#knapp2').hide();
 	$('#knapp4').hide();
 	$('#resultat').hide();
+	document.getElementById("fraganr").innerHTML =  i + "/5";
 })
-var i = 1;
 //Byter till nästa fråga, om i inte är mindre än 9 tar den bort nästa fråga knappen och ersätter den med rätta knappen istället.
 $(document).ready(function(){
 	$('#knapp3').on('click', function(){
@@ -88,7 +89,7 @@ function ratta(){
 //Sen skriver den ut rätt. 
  		document.getElementById("rätt").innerHTML = 'Rätt antal svar: ' + rätt;
 	}
-
+// Funktionen som får navbaren att vara sticky
 $(document).ready(function() {
 		   	var stickyNavTop = $('.nav').offset().top;
 
@@ -109,38 +110,39 @@ $(document).ready(function() {
 		});
 
 
-// Set the date we're counting down to
+// Sätter datumet som vi räknar ner till
 var countDownDate = new Date("May 27, 2019 20:30:00").getTime();
 
-// Update the count down every 1 second
+// Uppdaterar nedräkningen varje sekund
 var x = setInterval(function() {
 
-  // Get today's date and time
+  // Få dagens tid
   var now = new Date().getTime();
 
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
+  // Tidsuträkningar i dagar, timmar, minuter och sekunder
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
+  // Visar uträkningen i id demo
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
-  // If the count down is finished, write some text 
+  // Skriver en text när programmeringen är klar
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "TJEJHACK!";
   }
 }, 1000);
-
+// Säkrar fredriks mail genom att dela upp den i flera biter
 var a = 'fredrik'
 var b = 'johansson'
 var c = 'ronneby'
 $(function(){
+	//lägger sedan ihop de och skriver ut de i htmlen
 	document.getElementById("email").innerHTML = 'Email: ' + a + '.' + b + '@' + c + '.se';
 })
