@@ -1,25 +1,25 @@
 
 :root{
+	/*Två  olika variabler*/
 	--huvud: 232, 12, 148;
 	--mainfont: 'VT323', monospace;
-	--skugga: 3px 3px 3px  ;
 }
 html{
+	/*Gör scrollen mjuk*/
 	scroll-behavior:smooth;
 	font-family: verdana;
 }
-.container{
 
-}
 .frageruta{
 	margin-top: 30px;
-	width: 100px;
-	height: 300px;
+	width: 100%;
+	height: 400px;
 	background-color: white;
 	box-shadow: 2px 2px 10px rgba(50, 60, 70, 0.4);
 	border-radius: 4px;
 }
 .nav{
+	/*Koppling till javascripten för att få navbaren sticky*/
 	position: -webkit-sticky;
 	background-color: white;
 }
@@ -135,6 +135,7 @@ footer{
 }
 
 .image {
+	/*Gör att bilden kan få en overlay utan att flyttas samt säger hur den ska overlayas*/
   opacity: 1;
   display: block;
   width: 100%;
@@ -144,6 +145,7 @@ footer{
 }
 
 .middle {
+	/*Overlayen på bilderna*/
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -165,6 +167,7 @@ footer{
 .text {
 	font-size: 18px;
 }
+/*omoss används på många ställen i koden främst för att jag började göra det och den är överallt nu*/
 .omoss {
 	margin-top: 100px;
 }
@@ -180,7 +183,7 @@ footer{
 	flex-wrap: wrap;
 }
 .landing {
-	height: 550px;
+	height: 500px;
 
 	background-image: url("../img/landing.jpg");
 }
@@ -188,9 +191,10 @@ footer{
 	max-width: 50%;
 }
 .countdown{
+	/*Css för nedräkningen, positionen är absolute så den alltid är på samma ställe, detta stället bestäms med hjälp av %*/
   position: absolute;
-  top: 30%;
-  left: 34%;
+  top: 34%;
+  left: 35%;
   text-align: center;
   background-color: rgba(0,0,0,0.5);
   padding: 10px;
@@ -199,12 +203,42 @@ footer{
 .demo {
 	color: rgba(var(--huvud));
 	font-family: var(--mainfont);
+	font-size:45px;
 }
 #demo {
 	color: rgba(var(--huvud));
 	font-family: var(--mainfont);
+	font-size: 45px;
 }
 .fb {
 	float: center;
 }
-.anchor{display: block; position: relative; top: -100px; visibility: hidden;}
+/*Inlagt från en iframe för att validatorn ville ha det här*/
+.anchor{
+	display: block;
+	position: relative; 
+	top: -100px; 
+	visibility: hidden;
+}
+.spel {
+
+}
+/*Även denna är inlagd för att validatorn ville ha det i css istället*/
+.iframe {
+	border: 0;
+}
+.yt {
+	width: 100%
+}
+.mapouter{
+	position:relative;
+	text-align:right;
+	max-height:300px;
+	max-width:400px;
+}
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	max-height:300px;
+	max-width:400px;
+}
